@@ -7,7 +7,7 @@ import { BASE_URL } from "../utils/constants";
 const Login = () => {
   const [emailId, setEmailId] = useState("mark@gmail.com");
   const [password, setPassword] = useState("Mark@123");
-  const [error , setError] = useState("");
+  const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ const Login = () => {
       navigate("/");
     } catch (err) {
       setError(err?.response?.data);
-      // console.log(err);
+      // (err);
     }
   };
 
