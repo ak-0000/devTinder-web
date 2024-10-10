@@ -36,7 +36,7 @@ const Connections = () => {
         return (
           <div
             key={_id}
-            className="flex justify-between items-center rounded-lg m-4 p-4 bg-base-300 mx-auto w-2/3 mt-6"
+            className="flex justify-leftrounded-lg m-4 p-4 bg-base-300 mx-auto w-1/2 mt-6"
           >
             <div>
               <img
@@ -52,10 +52,7 @@ const Connections = () => {
               {age && gender && <p>{age + " " + gender}</p>}
               <p>{about}</p>
             </div>
-            <div className="">
-            <button className="btn btn-info bg-red-600 mx-2">Reject</button>
-            <button className="btn btn-success mx-2">Accept</button>
-            </div>
+            
           </div>
         );
       })}

@@ -28,14 +28,14 @@ const Requests = () => {
 
   return (
     <div className="text-center my-10 ">
-      <h1 className="text-bold text-white text-3xl">Connections</h1>
+      <h1 className="text-bold text-white text-3xl">Connections Requests</h1>
       {requests.map((request) => {
         const { _id, firstName, lastName, photoUrl, age, gender, about } =
           request.fromUserId;
         return (
           <div
             key={_id}
-            className="flex rounded-lg m-4 p-4 bg-base-300 mx-auto w-1/2 mt-6"
+            className="flex justify-between items-center rounded-lg m-4 p-4 bg-base-300 mx-auto w-2/3 mt-6"
           >
             <div>
               <img
@@ -44,12 +44,16 @@ const Requests = () => {
                 src={photoUrl}
               />
             </div>
-            <div className="text-left ">
+            <div className="text-left  justify-between items-center">
               <h1 className="font-bold text-lg">
                 {firstName + " " + lastName}
               </h1>
               {age && gender && <p>{age + " " + gender}</p>}
               <p>{about}</p>
+            </div>
+              <div className="">
+            <button className="btn btn-info bg-red-600 mx-2">Reject</button>
+            <button className="btn btn-success mx-2">Accept</button>
             </div>
           </div>
         );
