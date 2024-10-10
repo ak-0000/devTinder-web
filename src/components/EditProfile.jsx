@@ -11,7 +11,7 @@ const EditProfile = ({ user }) => {
   const [age, setAge] = useState(user.age);
   const [about, setAbout] = useState(user.about);
   const [gender, setGender] = useState(user.gender);
-  const [showToast , setShowToast] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const dispatch = useDispatch();
 
   const saveProfile = async () => {
@@ -25,8 +25,8 @@ const EditProfile = ({ user }) => {
     dispatch(addUser(profile?.data?.data));
     setShowToast(true);
     setTimeout(() => {
-        setShowToast(false);
-    },3000);
+      setShowToast(false);
+    }, 3000);
   };
 
   useEffect(() => {
@@ -104,10 +104,12 @@ const EditProfile = ({ user }) => {
           </div>
         </div>
       </div>
-       <div className="toast toast-top toast-center">
-        {showToast && <div className="alert alert-success">
-          <span>Profile saved successfully.</span>
-        </div>}
+      <div className="toast toast-top toast-center">
+        {showToast && (
+          <div className="alert alert-success">
+            <span>Profile saved successfully.</span>
+          </div>
+        )}
       </div>
     </>
   );
